@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Module 2 – Closest Pair & Clustering Tree</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="module2">
+  <header class="app-header">
+    <div class="logo">BusStop<span>Opt</span></div>
+    <nav class="nav-links">
+      <a href="index.html">Overview</a>
+      <a href="module1.html">Module 1</a>
+      <a href="module2.html" class="active">Module 2</a>
+      <a href="module3.html">Module 3</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Module 2: Closest Pair & Clustering Tree Formation</h1>
+    <p class="subtitle">
+      We use distance computations to find the closest pair of points and
+      build a simple hierarchical clustering tree.
+    </p>
+
+    <section class="card">
+      <h2>Dataset Status</h2>
+      <p id="m2DataInfo" class="muted"></p>
+      <a href="module1.html" class="btn ghost small">Edit Data in Module 1</a>
+    </section>
+
+    <section class="card">
+      <h2>Closest Pair Detection</h2>
+      <button id="runClosestPair" class="btn primary small">Run Closest Pair</button>
+      <div id="closestPairResult" class="result-block"></div>
+    </section>
+
+    <section class="card">
+      <div class="card-header-flex">
+        <h2>Clustering Tree (Agglomerative)</h2>
+        <button id="runClustering" class="btn primary small">Build Clustering Tree</button>
+      </div>
+      <p class="muted">
+        We repeatedly merge the two closest clusters until one cluster remains.
+        This produces a clustering tree (bottom = individual points, top = one cluster).
+      </p>
+      <div id="clusterSummary" class="result-block"></div>
+      <pre id="clusterTree" class="tree-view"></pre>
+    </section>
+
+    <div class="next-module-banner">
+      <p>Proceed to Module 3 to compute optimal bus stop locations from clusters.</p>
+      <a href="module3.html" class="btn primary">Go to Module 3</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <span>Module 2 · Closest Pair & Clustering Tree Formation</span>
+  </footer>
+</body>
+</html>

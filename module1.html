@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Module 1 – Data Collection & Spatial Preprocessing</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="module1">
+  <header class="app-header">
+    <div class="logo">BusStop<span>Opt</span></div>
+    <nav class="nav-links">
+      <a href="index.html">Overview</a>
+      <a href="module1.html" class="active">Module 1</a>
+      <a href="module2.html">Module 2</a>
+      <a href="module3.html">Module 3</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Module 1: Data Collection & Spatial Preprocessing</h1>
+    <p class="subtitle">
+      Enter student/house locations as 2D coordinates (X, Y).
+      Units can be meters or arbitrary campus grid units.
+    </p>
+
+    <section class="card">
+      <h2>Add Location</h2>
+      <form id="point-form" class="form-grid">
+        <div class="form-group">
+          <label for="idInput">Point ID / Name</label>
+          <input id="idInput" type="text" placeholder="e.g. H1, S101, House A" required>
+        </div>
+        <div class="form-group">
+          <label for="xInput">X Coordinate</label>
+          <input id="xInput" type="number" step="0.01" placeholder="e.g. 12.5" required>
+        </div>
+        <div class="form-group">
+          <label for="yInput">Y Coordinate</label>
+          <input id="yInput" type="number" step="0.01" placeholder="e.g. 8.0" required>
+        </div>
+        <div class="form-group full">
+          <button type="submit" class="btn primary">Add Point</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card">
+      <div class="card-header-flex">
+        <h2>Current Dataset</h2>
+        <div>
+          <button id="clearPoints" class="btn danger small">Clear All</button>
+        </div>
+      </div>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>ID</th>
+              <th>X</th>
+              <th>Y</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="pointsTableBody">
+            <!-- Filled by JS -->
+          </tbody>
+        </table>
+      </div>
+      <p id="pointsSummary" class="muted"></p>
+    </section>
+
+    <section class="card">
+      <h2>Spatial Preview (Simple Scatter)</h2>
+      <p class="muted">
+        This is a basic visualization (not geo-accurate). It helps you see
+        the relative distribution of points before clustering.
+      </p>
+      <canvas id="pointsCanvas" width="600" height="350" class="canvas-preview"></canvas>
+    </section>
+
+    <div class="next-module-banner">
+      <p>Once your dataset is ready, move to Module 2 for Closest Pair & Clustering.</p>
+      <a href="module2.html" class="btn primary">Go to Module 2</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <span>Module 1 · Data Collection & Spatial Preprocessing</span>
+  </footer>
+</body>
+</html>
